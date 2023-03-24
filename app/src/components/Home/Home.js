@@ -5,7 +5,7 @@ export const Home = () => {
           <h2>Welcome to FitReviews</h2>
           <h3>Your go-to source for fitness product reviews</h3>
         </div>
-        <img src="./images/fitness_hero.png" alt="hero" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBRptfp7P9FJstotLpQIZQGysDaw6JWPJFZwUb-uI-9v8BhaajzTToELqcJfm6rDOHu0&usqp=CAU" alt="product" />
   
         <div id="home-page">
           <h1>Latest Reviews</h1>
@@ -13,7 +13,7 @@ export const Home = () => {
           {/* Display div with information about every product (if any) */}
           <div className="product">
             <div className="image-wrap">
-              <img src="./images/protein_powder.png" alt="product image" />
+              <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2023%2F03%2F03%2FWhat-Happens-to-Your-Body-When-You-Take-Protein-Powder-Every-Day.jpg" alt="product image" />
             </div>
             <h3>Protein Powder</h3>
             <div className="rating">
@@ -26,7 +26,7 @@ export const Home = () => {
   
           <div className="product">
             <div className="image-wrap">
-              <img src="./images/workout_shoes.png" alt="product image" />
+              <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663005594-hovr-infinite-4-1663005562.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="shoe image" />
             </div>
             <h3>Workout Shoes</h3>
             <div className="rating">
@@ -39,7 +39,7 @@ export const Home = () => {
   
           <div className="product">
             <div className="image-wrap">
-              <img src="./images/fitness_tracker.png" alt="product image" />
+              <img src="https://cdn.mos.cms.futurecdn.net/E6ADsCBuwyLiEb5XCGq2XX.jpg" alt="tracker" />
             </div>
             <h3>Fitness Tracker</h3>
             <div className="rating">
