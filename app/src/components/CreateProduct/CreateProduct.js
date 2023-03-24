@@ -7,7 +7,7 @@ export const CreateProduct = ({
         title: '',
         category: '',
         imageUrl: '',
-        summary: '',
+        description: '',
     }, onCreateProductSubmit);
 
     return (
@@ -25,8 +25,8 @@ export const CreateProduct = ({
                     <label htmlFor="game-img">Image:</label>
                     <input value={values.imageUrl} onChange={changeHandler} type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo" />
 
-                    <label htmlFor="summary">Summary:</label>
-                    <textarea name="summary" id="summary" value={values.summary} onChange={changeHandler}></textarea>
+                    <label htmlFor="description">Description:</label>
+                    <textarea name="description" id="description" value={values.description} onChange={changeHandler}></textarea>
                     <input className="btn submit" type="submit" value="Create Review" />
                 </div>
             </form>
