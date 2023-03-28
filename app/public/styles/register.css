@@ -1,0 +1,81 @@
+#register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.Register {
+  width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.Register .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Register h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.Register label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.Register input[type="email"],
+.Register input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Register input[type="submit"] {
+  width: 100%;
+  background-color: #c7a17a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Register input[type="submit"]:hover {
+  background-color: #a87b4e;
+}
+
+.Register .field {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.Register .field a {
+  color: #0069ed;
+  text-decoration: none;
+}
+
+.Register .field a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
