@@ -1,142 +1,152 @@
-/* Create Review Section */
 #create-page {
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  #create-page h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #2d2d2d;
-  }
-  
-  #create-page form {
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  #create-page label {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2d2d2d;
-  }
-  
-  #create-page input[type="text"],
-  #create-page textarea {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
-    color: #2d2d2d;
-    font-size: 16px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  #create-page input[type="text"]::placeholder,
-  #create-page textarea::placeholder {
-    color: #b5b5b5;
-  }
-  
-  #create-page input[type="submit"] {
-    background-color: #e64c3c;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 30px;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
-    width: 100%;
-  }
-  
-  #create-page input[type="submit"]:hover {
-    background-color: #c73c2c;
-  }
-  
-  #create-page textarea {
-    height: 150px;
-  }
-  #edit-page {
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  #edit-page h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #2d2d2d;
-  }
-  
-  #edit-page form {
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  #edit-page label {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2d2d2d;
-  }
-  
-  #edit-page input[type="text"],
-  #edit-page input[type="number"],
-  #edit-page textarea {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
-    color: #2d2d2d;
-    font-size: 16px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  #edit-page input[type="text"]::placeholder,
-  #edit-page input[type="number"]::placeholder,
-  #edit-page textarea::placeholder {
-    color: #b5b5b5;
-  }
-  
-  #edit-page input[type="submit"] {
-    background-color: #e64c3c;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 30px;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
-    width: 100%;
-  }
-  
-  #edit-page input[type="submit"]:hover {
-    background-color: #c73c2c;
-  }
-  
-  #edit-page textarea {
-    height: 150px;
-  }
-  
-  
-  
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+#create-page h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+#create-page form {
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#create-page label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+#create-page input[type="text"],
+#create-page textarea {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  color: #2d2d2d;
+  font-size: 16px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#create-page input[type="text"]::placeholder,
+#create-page textarea::placeholder {
+  color: #b5b5b5;
+}
+
+#create-page input[type="submit"] {
+  background-color:  #c7a17a;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#create-page input[type="submit"]:hover {
+  background-color:   #a87b4e;
+}
+
+#create-page textarea {
+  height: 150px;
+}
+
+#create-page .container {
+  width: 100%;
+  max-width: 800px;
+}
+
+#create-page .error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+
+#edit-page {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+#edit-page h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+#edit-page form {
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#edit-page label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+#edit-page input[type="text"],
+#edit-page textarea {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  color: #2d2d2d;
+  font-size: 16px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#edit-page input[type="text"]::placeholder,
+#edit-page textarea::placeholder {
+  color: #b5b5b5;
+}
+
+#edit-page input[type="submit"] {
+  background-color: #c7a17a;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#edit-page input[type="submit"]:hover {
+  background-color: #a87b4e;
+}
+
+#edit-page textarea {
+  height: 150px;
+}
