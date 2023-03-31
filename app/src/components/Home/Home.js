@@ -49,9 +49,7 @@ export const Home = () => {
               <a href="#" className="btn details-btn">Details</a>
             </div>
           </div>
-  
-          {/* Display paragraph if there are no products */}
-          <p className="no-articles">No products yet</p>
+
         </div>
       </section>
     );

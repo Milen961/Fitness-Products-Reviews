@@ -25,9 +25,9 @@ export const EditProduct = ({ onProductEdit }) => {
 
   useEffect(() => {
     productService.getOne(productId)
-    .then(result => {
-      changeValues(result)
-    });
+      .then(result => {
+        changeValues(result)
+      });
   }, [productId])
 
   const validateTitle = () => {
@@ -67,50 +67,58 @@ export const EditProduct = ({ onProductEdit }) => {
       <form id="edit" method="post" onSubmit={onSubmit}>
         <div className="Edit-Container">
           <h1>Edit Fitness Product</h1>
-          <label htmlFor="routine-title">Title:</label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            value={values.title}
-            onChange={changeHandler}
-            onBlur={validateTitle}
-          />
-          {titleError && <span className="error">{titleError}</span>}
 
-          <label htmlFor="category">Category:</label>
-          <input
-            type="text"
-            id="category"
-            name="category"
-            value={values.category}
-            onChange={changeHandler}
-            onBlur={validateCategory}
-          />
-          {categoryError && <span className="error">{categoryError}</span>}
+          <div className="form-group">
+            <label htmlFor="routine-title">Title:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              value={values.title}
+              onChange={changeHandler}
+              onBlur={validateTitle}
+            />
+            {titleError && <span className="error">{titleError}</span>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="category">Category:</label>
+            <input
+              type="text"
+              id="category"
+              name="category"
+              value={values.category}
+              onChange={changeHandler}
+              onBlur={validateCategory}
+            />
+            {categoryError && <span className="error">{categoryError}</span>}
+          </div>
 
-          <label htmlFor="routine-img">Image:</label>
-          <input
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            value={values.imageUrl}
-            onChange={changeHandler}
-            onBlur={validateImageUrl}
-          />
-          {imageUrlError && <span className="error">{imageUrlError}</span>}
+          <div className="form-group">
+            <label htmlFor="routine-img">Image:</label>
+            <input
+              type="text"
+              id="imageUrl"
+              name="imageUrl"
+              value={values.imageUrl}
+              onChange={changeHandler}
+              onBlur={validateImageUrl}
+            />
+            {imageUrlError && <span className="error">{imageUrlError}</span>}
+          </div>
 
-          <label htmlFor="description">Description:</label>
-          <textarea
-            name="description"
-            id="description"
-            value={values.description}
-            onChange={changeHandler}
-            onBlur={validateDescription}
-          ></textarea>
-          {descriptionError && (
-            <span className="error">{descriptionError}</span>
-          )}
+          <div className="form-group">
+            <label htmlFor="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              value={values.description}
+              onChange={changeHandler}
+              onBlur={validateDescription}
+            ></textarea>
+            {descriptionError && (
+              <span className="error">{descriptionError}</span>
+            )}
+          </div>
 
           <input className="btn submit" type="submit" disabled={!values.title || !values.category || !values.imageUrl || !values.description} value="Save" />
         </div>

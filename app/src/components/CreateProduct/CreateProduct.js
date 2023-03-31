@@ -55,55 +55,69 @@ export const CreateProduct = ({ onCreateProductSubmit }) => {
         <div className="container">
           <h1>Create Review</h1>
 
-          <label htmlFor="leg-title">Product:</label>
-          <input
-            value={values.title}
-            onChange={changeHandler}
-            onBlur={validateTitle}
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Enter product title"
+          <div className="form-group">
+            <label htmlFor="title">Product:</label>
+            <input
+              value={values.title}
+              onChange={changeHandler}
+              onBlur={validateTitle}
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter product title"
             />
             {titleError && <span className="error">{titleError}</span>}
+          </div>
 
-          <label htmlFor="category">Category:</label>
+          <div className="form-group">
+            <label htmlFor="category">Category:</label>
+            <input
+              value={values.category}
+              onChange={changeHandler}
+              onBlur={validateCategory}
+              type="text"
+              id="category"
+              name="category"
+              placeholder="Enter product category"
+            />
+            {categoryError && <span className="error">{categoryError}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="imageUrl">Image:</label>
+            <input
+              value={values.imageUrl}
+              onChange={changeHandler}
+              onBlur={validateImageUrl}
+              type="text"
+              id="imageUrl"
+              name="imageUrl"
+              placeholder="Upload a photo"
+            />
+            {imageUrlError && <span className="error">{imageUrlError}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              value={values.description}
+              onChange={changeHandler}
+              onBlur={validateDescription}
+            ></textarea>
+            {descriptionError && <span className="error">{descriptionError}</span>}
+          </div>
+
           <input
-            value={values.category}
-            onChange={changeHandler}
-            onBlur={validateCategory}
-            type="text"
-            id="category"
-            name="category"
-            placeholder="Enter product category"
+            className="btn submit"
+            type="submit"
+            disabled={!values.title || !values.category || !values.imageUrl || !values.description}
+            value="Create Review"
           />
-           {categoryError && <span className="error">{categoryError}</span>}
-
-          <label htmlFor="game-img">Image:</label>
-          <input
-            value={values.imageUrl}
-            onChange={changeHandler}
-            onBlur={validateImageUrl}
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            placeholder="Upload a photo"
-          />
-          {imageUrlError && <span className="error">{imageUrlError}</span>}
-
-          <label htmlFor="description">Description:</label>
-          <textarea
-            name="description"
-            id="description"
-            value={values.description}
-            onChange={changeHandler}
-            onBlur={validateDescription}
-          ></textarea>
-          {descriptionError && <span className="error">{descriptionError}</span>}
-
-          <input className="btn submit" type="submit" disabled={!values.title || !values.category || !values.imageUrl || !values.description} value="Create Review" />
         </div>
       </form>
     </section>
   );
 };
+

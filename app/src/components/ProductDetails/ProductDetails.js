@@ -58,11 +58,16 @@ export const ProductDetails = () => {
     
 
     const isOwner = product._ownerId === userId;
-
+        
+   const onDelete = () => {
+    window.location.reload()
+   }
+     
     const onDeleteClick = async () => {
         await productService.delete(product._id);
         dispatch({ type: 'PRODUCT_DELETE' });
         navigate('/catalog');
+        onDelete()
     };
     return (
         <section id="product-details">
