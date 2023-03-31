@@ -101,7 +101,7 @@ export const CreateProduct = ({ onCreateProductSubmit }) => {
           ></textarea>
           {descriptionError && <span className="error">{descriptionError}</span>}
 
-          <input className="btn submit" type="submit" value="Create Review" />
+          <input className="btn submit" type="submit" disabled={!values.title || !values.category || !values.imageUrl || !values.description} value="Create Review" />
         </div>
       </form>
     </section>
