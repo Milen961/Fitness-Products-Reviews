@@ -26,12 +26,6 @@ export const productServiceFactory = (token) => {
         return result;
     };
     
-    const addComment = async (productId, data) => {
-        const result = await request.post(`${baseUrl}/${productId}/comments`, data);
-    
-        return result;
-    };
-
     const edit = (productId, data) => request.put(`${baseUrl}/${productId}`, data);
 
     const deleteProduct = (productId) => request.delete(`${baseUrl}/${productId}`);
@@ -42,7 +36,6 @@ export const productServiceFactory = (token) => {
         getOne,
         create,
         edit,
-        addComment,
         delete: deleteProduct,
     };
 }
