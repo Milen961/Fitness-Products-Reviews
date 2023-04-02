@@ -1,28 +1,22 @@
-import { useEffect, useContext, useState, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { AuthContext, useAuthContext } from "../../contexts/AuthContext";
+import {  useAuthContext } from "../../contexts/AuthContext";
 import { productServiceFactory } from "../../services/productService";
 import { useService } from "../../hooks/useService";
 import { productReducer } from "../../reducer/productReducer";
 import * as commentService from '../../services/commentService';
 import { AddComment } from "./AddComment/AddComment";
+import { useProductContext } from "../../contexts/ProductContext";
 
 export const ProductDetails = () => {
     
     const { productId } = useParams();
     const { userId, isAuthenticated, userEmail } = useAuthContext();
+    const { deleteProduct} = useProductContext()
     const [product, dispatch] = useReducer(productReducer, {});
     const productService = useService(productServiceFactory)
-    const { accessToken } = useContext(AuthContext);
     const navigate = useNavigate();
     
-
-
-    // const [username, setUsername] = useState('');
-    // const [comment, setComment] = useState('');
-
-
-
     useEffect(() => {
         Promise.all([
             productService.getOne(productId),
@@ -38,16 +32,8 @@ export const ProductDetails = () => {
     }, [productId]);
 
     const onCommentSubmit = async (values) => {
-        if (!accessToken) {
-            // User is not authenticated, handle it here
-            console.log('User is not authenticated');
-            return;
-        }
-    
-        const response = await commentService.create(productId, values.comment, {
-            headers: { Authorization: `Bearer ${accessToken}` }
-        });
-    
+        const response = await commentService.create(productId, values.comment);
+
         dispatch({
             type: 'COMMENT_ADD',
             payload: response,
@@ -55,20 +41,23 @@ export const ProductDetails = () => {
         });
     };
     
-    
 
     const isOwner = product._ownerId === userId;
         
-   const onDelete = () => {
-    window.location.reload()
-   }
-     
     const onDeleteClick = async () => {
-        await productService.delete(product._id);
-        dispatch({ type: 'PRODUCT_DELETE' });
-        navigate('/catalog');
-        onDelete()
+        // eslint-disable-next-line no-restricted-globals
+        const result = confirm(`Are you sure you want to delete ${product.title}`);
+
+        if (result) {
+            await productService.delete(product._id);
+
+            deleteProduct(product._id);
+
+            navigate('/catalog');
+        }
     };
+
+
     return (
         <section id="product-details">
             <h1>Product Details</h1>
