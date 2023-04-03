@@ -3,8 +3,10 @@ import { useParams } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { useService } from "../../hooks/useService";
 import { productServiceFactory } from "../../services/productService";
+import { useProductContext } from "../../contexts/ProductContext";
 
-export const EditProduct = ({ onProductEdit }) => {
+export const EditProduct = () => {
+  const {onProductEdit} = useProductContext()
   const { productId } = useParams();
   const productService = useService(productServiceFactory);
   const [titleError, setTitleError] = useState('');

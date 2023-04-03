@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 import { useForm } from "../../hooks/useForm";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -7,7 +8,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 export const Login = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const { onLoginSubmit } = useContext(AuthContext);
+  const { onLoginSubmit } = useAuthContext();
   const { values, changeHandler, onSubmit } = useForm({
     email: '',
     password: '',

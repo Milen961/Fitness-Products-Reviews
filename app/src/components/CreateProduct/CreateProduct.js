@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useForm } from '../../hooks/useForm';
+import { useProductContext } from '../../contexts/ProductContext';
 
-export const CreateProduct = ({ onCreateProductSubmit }) => {
+export const CreateProduct = () => {
+  const{onCreateProductSubmit} = useProductContext()
   const [titleError, setTitleError] = useState('');
   const [categoryError, setCategoryError] = useState('');
   const [imageUrlError, setImageUrlError] = useState('');
