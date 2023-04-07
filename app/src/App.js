@@ -37,7 +37,7 @@ function App() {
             <Route path='/catalog' element={<Catalog />} />
             <Route path='/catalog/:productId' element={<ProductDetails />} />
 
-              <Route element= {<RouteGuard /> }>
+            <Route element= {<RouteGuard /> }>
             <Route path='/logout' element={<Logout />} />
             <Route path='/create-product' element={<CreateProduct  />}/>
             <Route path='/catalog/:productId/edit' element={<EditProduct  />} />
