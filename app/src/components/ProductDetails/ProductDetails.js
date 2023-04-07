@@ -65,7 +65,8 @@ export const ProductDetails = () => {
           <div className="product-info">
             <h1 className="product-title">Product: {product.title}</h1>
             <p className="product-category">Category: {product.category}</p>
-            <p className="product-description">Description: {product.description}</p>
+            <p>Description:</p>
+            <textarea className="product-description" values={product.description} style={{width: "300px", height: "100px"}} readOnly />
           </div>
         </div>
 
