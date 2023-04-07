@@ -1,56 +1,38 @@
-.create-comment>.form>textarea {
-    resize: none;
-    width: 100px;
-    height: 100px;
-    margin-top: 22px;
-    margin-bottom: 28px;
-    padding: 5px;
-}
-
-.details-comments {
-    display: table-cell;
-}
-
 .create-comment {
-    margin-top: 60px;
-    position: relative;
-    text-align: center;
-    width: 700px;
-    height: auto;
-    border-radius: 20px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #6f5d9c;
-    box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
-}
-
-.create-comment>label {
+    margin-top: 2rem;
+  }
+  
+  .create-comment label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .create-comment textarea {
+    width: 97.5%;
+    height: 8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    resize: vertical;
+  }
+  
+  .create-comment .btn.submit {
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
     color: white;
-    font-size: 28px;
-    text-align: center;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.info-section>.details-comments li {
-    width: 400px;
-    display: inline-block;
-    position: static;
-    margin: 20px auto 25px auto;
-    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 16px;
-    margin-left: 60px;
-    background: #6f5d9c;
-    color: white;
-}
-
-.comment p {
-    padding: 16px;
-}
-
-
-.create-comment>.button:hover {
-    background-color: #41425c;
-    color: white;
+    background-color:  #c7a17a;
     cursor: pointer;
-}
+  }
+  
+  .create-comment .btn.submit:hover {
+    background-color:   #a87b4e;
+  }
+  

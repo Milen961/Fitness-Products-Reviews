@@ -1,65 +1,93 @@
-/* CSS for the CatalogItem component */
-.allProducts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-  }
+
+.allProducts-info {
+  display: flex;
+  width: 35%;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+
+.product-image-container {
+
+  margin-right: 1rem;
+}
+.productImg {
+  width: 300px;
+  height: 300px;
+  object-fit:contain
+}
+
+
+
+.product-details {
+  width: 70%;
+  margin-top: 65px;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.product-category {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 0.5rem;
+  color: #888;
+}
+
+.product-description {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.details-button {
+  background-color: #c7a17a;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.details-button:hover {
+  background-color: #a87b4e;
+}
+#catalog-page {
+  margin: 2rem 0;
   
+}
+.ALL{
+ margin: 0 auto;
+ float: none;
+}
+
+.allReviews {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.no-articles {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
   .allProducts-info {
-    display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  
-  .allProducts-info img {
-    max-width: 100%;
-    margin-bottom: 1rem;
+
+  .product-details {
+    width: 100%;
   }
-  
-  .allProducts-info h6 {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #888;
-  }
-  
-  .allProducts-info h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  .details-button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .details-button:hover {
-    background-color: #0069d9;
-  }
-  
-  
-  /* CSS for the CatalogPage component */
-  #catalog-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  #catalog-page h1 {
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: 2.5rem;
-  }
-  
-  .no-articles {
-    text-align: center;
-    color: #888;
-    margin-top: 2rem;
-    font-size: 1.5rem;
-  }
-  
+}
