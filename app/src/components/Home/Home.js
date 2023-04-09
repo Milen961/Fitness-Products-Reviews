@@ -24,7 +24,7 @@ export const Home = () => {
       <img  src="https://img.freepik.com/premium-vector/gym-logo-design-template-fitness-club-creative-symbols_487414-2141.jpg?w=2000" alt="fit" />
       </div> */}
       <div className="home-page">
-        <h1>Welcome to Fitness Prodcut Reviews
+        <h1>Welcome to Fitness Product Reviews
           <p>Your source for quality information</p>
         </h1>
         <h2>Latest Reviews </h2>
