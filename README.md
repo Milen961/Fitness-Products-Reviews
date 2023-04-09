@@ -40,20 +40,19 @@ Commenting on Reviews
 
 Registered users can comment on reviews by clicking on the "Add Comment" button on the review details page. Fill out the comment form and submit it to add your comment to the review. 
 
-Permisions: 
-Permissions for reviews	  User  Guest
-View Home page	          ✅	   ✅
-View Reviews Details page ✅	   ✅
-See All Reviews	          ✅	   ✅ 
-Create new Review	      ✅	   ❌
-Edit review * owner	      ✅	   ❌
-Delete review * owner	  ✅	   ❌
-See all Comments	      ✅	   ✅
-Create a Comment	      ✅	   ❌ 
-Login	                  ❌	   ✅
-Register	              ❌    ✅
-Logout	                  ✅	   ❌
 
+| Permission        | User | Guest |
+| ----------------- | ---- | ----- |
+| View Home Page    | ✅  | ✅  |
+| View all reviews   | ✅  | ✅  |
+| Create review       | ✅  | ❌  |
+| View review Details | ✅  | ✅	   |
+| Edit review         | ✅  | ❌   |
+| Delete review       | ✅  | ❌    |
+| Comment review      | ✅  | ❌   |
+| Login             | ❌  | ✅   |
+| Register          | ❌   | ✅   |
+| Logout            | ✅  | ❌    |
 
 Conclusion 
 
