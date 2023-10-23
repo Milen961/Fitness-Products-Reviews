@@ -16,6 +16,7 @@ export const Header = () => {
                         <span>{userEmail}</span>
                         <Link to="/create-product">Create Review</Link>
                         <Link to="/logout">Logout</Link>
+                        <Link to ="/maps">GoogleMaps</Link>
                     </div>
                 )}
 

@@ -13,6 +13,7 @@ import { EditProduct } from "./components/EditProduct.js/EditProduct";
 import { RouteGuard } from "./components/common/RouteGuard";
 import { ProductProvider } from "./contexts/ProductContext";
 import { PageNotFound } from "./components/PageNotFound/PageNotFound";
+import MapContainer from "./components/MapContainer/MapContainer";
 
 
 function App() {
@@ -35,9 +36,12 @@ function App() {
             <Route path='/catalog/:productId' element={<ProductDetails />} />
 
             <Route element= {<RouteGuard /> }>
+            
             <Route path='/logout' element={<Logout />} />
             <Route path='/create-product' element={<CreateProduct  />}/>
             <Route path='/catalog/:productId/edit' element={<EditProduct  />} />
+            <Route path='/maps' element ={<MapContainer />}/>
+
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Routes>
