@@ -28,8 +28,9 @@ const Profile = ({ token, personId }) => {
       ) : userProfile ? (
         <div>
           <h1>User Profile</h1>
-          <p>Name: {userProfile.name}</p>
+          <p>Name: {userProfile.userName}</p>
           <p>Email: {userProfile.email}</p>
+          <p>Phone: {userProfile.phoneNumber}</p>
         </div>
       ) : (
         <p>No user profile found.</p>
