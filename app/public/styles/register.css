@@ -32,8 +32,10 @@
   margin-bottom: 10px;
 }
 
+.Register input[type="userName"],
 .Register input[type="email"],
-.Register input[type="password"] {
+.Register input[type="password"],
+.Register input[type="phoneNumber"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
