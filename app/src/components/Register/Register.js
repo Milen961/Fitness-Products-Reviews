@@ -6,12 +6,25 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 export const Register = () => {
   const [passwordError, setPasswordError] = useState("");
+  const [userNameError, setUserNameError ] = useState("");
+  const [phoneNumberError, setPhoneNumberError] = useState("");
   const { onRegisterSubmit } = useContext(AuthContext);
   const { values, changeHandler, onSubmit } = useForm({
+    userName: '',
     email: '',
     password: '',
     confirmPassword: '',
+    phoneNumber: '',
+
   }, onRegisterSubmit);
+  
+  const validateUserName = () => {
+    if (values.userName.length < 2){
+      setUserNameError("UserName must be at least 2 characters long");
+    } else{
+      setUserNameError("");
+    }
+  };
 
   const validatePassword = () => {
     if (values.password.length < 6) {
@@ -21,11 +34,19 @@ export const Register = () => {
     }
   };
 
+
   const validateConfirmPassword = () => {
     if (values.password !== values.confirmPassword) {
       setPasswordError("Passwords do not match");
     } else {
       setPasswordError("");
+    }
+  };
+  const validatePhoneNumber = () => {
+    if (values.phoneNumber.length < 10){
+      setPhoneNumberError("Phone number must be at least 7 digits");
+    } else{
+      setPhoneNumberError("");
     }
   };
 
@@ -36,12 +57,22 @@ export const Register = () => {
           <div className="brand-logo"></div>
           <h1>Register</h1>
 
+          <label htmlFor="userName">User Name:</label>
+          <input
+            type="userName"
+            id="userName"
+            name="userName"
+            value={values.userName}
+            onBlur={validateUserName}
+            onChange={changeHandler}
+          />
+          {userNameError && <span className="error">{userNameError}</span>}
+
           <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="milen_skrin@abv.bg"
             value={values.email}
             onChange={changeHandler}
           />
@@ -67,6 +98,18 @@ export const Register = () => {
             onChange={changeHandler}
           />
           {passwordError && <span className="error">{passwordError}</span>}
+
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            type="phoneNumber"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="+359"
+            value={values.phoneNumber}
+            onBlur={validatePhoneNumber}
+            onChange={changeHandler}
+          />
+          {phoneNumberError && <span className="error">{phoneNumberError}</span>}
 
           <input className="btn submit" type="submit" value="Register" />
 
